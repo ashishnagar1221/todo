@@ -1,0 +1,69 @@
+body{
+    background-color: #f3d1f4;
+}
+
+.container{
+    position: relative;
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #be79df;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.todo-part{
+    position: relative;
+    width: 60%;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.add {
+    position: relative;
+    width: 80%;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.main{
+    position: relative;
+    width: 10%;
+    margin-left: 8%;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.todo-list{
+list-style: none;
+margin-top: 10px;
+box-sizing: border-box;
+background-color: #f5fcc1;
+padding: 5px;
+border-radius: 6px;
+}
+.list-item{
+    padding: 4px;
+}
+
+.data{
+    font-size: 20px;
+    margin-left: 15%;
+    margin-right: 40%;
+    color: black;
+}
+
+.edit{
+    margin-left: 8%;
+    margin-right: 5%;
+    border: 0;
+}
+.del{
+    margin-left: 8%;
+    border: 0;
+}

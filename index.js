@@ -8,6 +8,7 @@ const routes = require('./routes/ShowAll')
 
 const port = process.env.PORT || 3600;
 mongoose.Promise = global.Promise;
+app.use(bodyParser.urlencoded({extended: false}));
 
 mongoose.connect("mongodb+srv://user:root@taramandal-puhil.mongodb.net/test?retryWrites=true&w=majority",
     { useNewUrlParser: true,

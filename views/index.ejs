@@ -36,8 +36,10 @@
                 <%}else{%>
                 <input type="checkbox">
                 <%}%>
-                    <span class="data"><%=data.task%></span> 
-                    <button class="edit"><span class="fas fa-edit"></span></button>
+                    <span class="data"><%=data.task%></span>
+                    <form action="/del/<%=data._id%>" method="GET"> 
+                        <button class="edit"><span class="fas fa-edit"></span></button>
+                    </form>
                     <button class="del"><span class="fas fa-trash"></span></button>
             </li>
             <% })} %> 

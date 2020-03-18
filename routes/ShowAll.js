@@ -26,13 +26,41 @@ router.post('/',(req,res)=>{
 
 //Update
 
-router.get(('/edit/:id'),function(req,res){
+// router.get(('/edit/:id'),function(req,res){
+//     const id = req.params.id;
+//     todo.find({},function(err,data){
+//         res.render("changes.ejs",)
+//     })
+// })
+
+//DELETE
+router.get('/del/:id',function(req,res){
     const id = req.params.id;
-    todo.find({},function(err,data){
-        res.render("changes.ejs",)
-    })
-})
+    //console.log(id);
+    Todo.findByIdAndRemove(id,function(err){
+        if(err)
+        return res.send(500,err);
+        else{
+        res.redirect('/');
+        }
+    });
+});
 
+// //TOGGLE DONE AND NOT DONE
+// router.get('/check/:id/:done',function(req,res){
+//     const id = req.params.id;
+//     let checked = req.params.done;
+//     console.log(checked);
+//     if(checked == false) 
+//         checked = true;
+//     else checked = false
 
+//     Todo.findByIdAndUpdate(id,{done:checked},function(err){
+//         if(err)
+//             return res.send(500,err);
+//         else
+//             res.redirect('/');
+//     })
+// })
 
 module.exports = router;

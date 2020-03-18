@@ -22,5 +22,17 @@ router.post('/',(req,res)=>{
     }catch(err){
         res.redirect("/");
     }
+});
+
+//Update
+
+router.get(('/edit/:id'),function(req,res){
+    const id = req.params.id;
+    todo.find({},function(err,data){
+        res.render("changes.ejs",)
+    })
 })
+
+
+
 module.exports = router;

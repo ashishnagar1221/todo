@@ -47,20 +47,18 @@ router.get('/del/:id',function(req,res){
 });
 
 // //TOGGLE DONE AND NOT DONE
-// router.get('/check/:id/:done',function(req,res){
-//     const id = req.params.id;
-//     let checked = req.params.done;
-//     console.log(checked);
-//     if(checked == false) 
-//         checked = true;
-//     else checked = false
-
-//     Todo.findByIdAndUpdate(id,{done:checked},function(err){
-//         if(err)
-//             return res.send(500,err);
-//         else
-//             res.redirect('/');
-//     })
-// })
+router.get('/check/:id/:done',function(req,res){
+    const id = req.params.id;
+    let checked = !req.params.done;
+    console.log(checked +" "+ typeof(checked));
+    Todo.findByIdAndUpdate(id,{done:checked},function(err){
+        if(err)
+            return res.send(500,err);
+        else{
+            console.log(checked +" "+ typeof(checked));
+            res.redirect('/');
+        }
+    })
+})
 
 module.exports = router;

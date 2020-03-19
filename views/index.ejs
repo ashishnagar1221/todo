@@ -31,16 +31,16 @@
             <%if(Todo.length > 0 ){
                 Todo.forEach(function(data){%>
            <li class="list-item">
-                <%if (data.done === true){%>
-                <input type="checkbox" checked >
-                <%}else{%>
-                <input type="checkbox">
-                <%}%>
+               <%let checked = data.done ? "checked" : "" %>
+                    <form action="/check/<%=data._id%>/<%=data.done%>" method="GET">
+                <input type="checkbox" onChange="this.form.submit()" <%= checked %> />
+                </form>
                     <span class="data"><%=data.task%></span>
+                    <button class="edit"><span class="fas fa-edit"></span></button>
                     <form action="/del/<%=data._id%>" method="GET"> 
-                        <button class="edit"><span class="fas fa-edit"></span></button>
+                        <button class="del"><span class="fas fa-trash"></span></button>
                     </form>
-                    <button class="del"><span class="fas fa-trash"></span></button>
+                    
             </li>
             <% })} %> 
         </ul>

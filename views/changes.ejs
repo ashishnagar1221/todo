@@ -30,6 +30,14 @@
         <ul class="todo-list">
             <%for(let i in Todo){%>
            <li class="list-item">
+
+            <%if(Todo[i]._id.toString() === ids.toString()){%>
+            <form action="/edit/<%=Todo[i]._id%>" method="POST">
+                <input type="text" value="<%=Todo[i].task%>"/>
+                <button type ="submit">Confirm</button>
+                <button><a href="/">Cancel</a></button>
+            </form>
+       <% } %>
                <%let checked = Todo[i].done ? "checked" : "" %>
                     <form action="/check/<%=Todo[i]._id%>" method="POST">
                 <input type="checkbox" name="todo1" onChange="this.form.submit()" <%= checked %> />

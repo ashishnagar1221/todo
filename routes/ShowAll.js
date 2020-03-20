@@ -16,7 +16,6 @@ router.post('/',(req,res)=>{
         task: req.body.task
     });
     try{
-        //console.log(todo);
          todo.save();
         res.redirect("/");
     }catch(err){
@@ -48,7 +47,6 @@ router.post('/edit/:id',function(req,res){
 //DELETE
 router.get('/del/:id',function(req,res){
     const id = req.params.id;
-    //console.log(id);
     Todo.findByIdAndRemove(id,function(err){
         if(err)
         return res.send(500,err);
@@ -67,18 +65,14 @@ router.post('/check/:id', function(req, res){
         Todo.updateOne({'_id': new mongodb.ObjectID(req.params.id)}, 
         { $set: {'done': true } },function(err, Todo){
             if(err) console.log(err);
-            else{
-                console.log("Done");
-            }
+            else{}
         });
     }else{
         
         Todo.updateOne({'_id': new mongodb.ObjectID(req.params.id)}, 
         { $set: {'done': false } },function(err, Todo){
             if(err) console.log(err);
-            else{
-                console.log("Undone");
-            }
+            else{}
         });
     }
     res.redirect("/")

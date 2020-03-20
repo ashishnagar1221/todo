@@ -33,7 +33,7 @@
 
             <%if(Todo[i]._id.toString() === ids.toString()){%>
             <form action="/edit/<%=Todo[i]._id%>" method="POST">
-                <input type="text" value="<%=Todo[i].task%>"/>
+                <input type="text" name="newTask" value="<%=Todo[i].task%>"/>
                 <button type ="submit">Confirm</button>
                 <button><a href="/">Cancel</a></button>
             </form>

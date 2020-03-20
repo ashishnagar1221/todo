@@ -31,14 +31,16 @@ router.get('/edit/:id',function(req,res){
     Todo.find({},function(err,docs){
         res.render("changes.ejs",{Todo:docs,ids:id})
     });
-}).
-post(function(req,res){
+})
+
+router.post('/edit/:id',function(req,res){
     var mongodb = require('mongodb');
+
     Todo.updateOne({'_id': new mongodb.ObjectID(req.params.id)}, 
-        { $set: {'task': req.body.task } },function(err, Todo){
+        { $set: {'task': req.body.newTask } },function(err){
             if(err) console.log(err);
             else{
-                console.log("Done");
+                res.redirect('/');
             }
         });
 })

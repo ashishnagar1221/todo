@@ -29,7 +29,7 @@
         </form>
         <ul class="todo-list">
             <%for(let i in Todo){%>
-           <li class="list-item">
+           <li class="row">
 
             <%if(Todo[i]._id.toString() === ids.toString()){%>
             <form action="/edit/<%=Todo[i]._id%>" method="POST">
@@ -37,7 +37,7 @@
                 <button type ="submit">Confirm</button>
                 <button><a href="/">Cancel</a></button>
             </form>
-       <% } %>
+       <% }else {%>
                <%let checked = Todo[i].done ? "checked" : "" %>
                     <form action="/check/<%=Todo[i]._id%>" method="POST">
                 <input type="checkbox" name="todo1" onChange="this.form.submit()" <%= checked %> />
@@ -48,10 +48,9 @@
                         </form>
                     <form action="/del/<%=Todo[i]._id%>" method="GET"> 
                         <button class="del"><span class="fas fa-trash"></span></button>
-                    </form>
-                    
+                    </form>          
             </li>
-            <% } %> 
+            <% }} %> 
         </ul>
     </div>
 </body>

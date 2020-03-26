@@ -27,21 +27,20 @@
             <input type="text" name="task" class="add" placeholder="Add new task ..." required/>
             <button type="submit" class="main"><span class="fas fa-plus"></span></button>
         </form>
-        <ul class="todo-list">
+        <ul>
             <%for(let i in Todo){%>
-           <li class="list-item">
+           <li>
                <%let checked = Todo[i].done ? "checked" : "" %>
                     <form action="/check/<%=Todo[i]._id%>" method="POST">
-                <input type="checkbox" name="todo1" onChange="this.form.submit()" <%= checked %> />
+                <input type="checkbox" name="todo1" class="chck" onChange="this.form.submit()" <%= checked %> />
                 </form>
                     <span class="data"><%=Todo[i].task%></span>
                     <form action="/edit/<%=Todo[i]._id%>" method="GET">
-                        <button class="edit"><span class="fas fa-edit"></span></button>
+                        <button class="edit">EDIT</button>
                         </form>
                     <form action="/del/<%=Todo[i]._id%>" method="GET"> 
-                        <button class="del"><span class="fas fa-trash"></span></button>
+                        <button class="del">DELETE</button>
                     </form>
-                    
             </li>
             <% } %> 
         </ul>

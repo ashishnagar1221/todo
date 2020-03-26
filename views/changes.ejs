@@ -40,14 +40,14 @@
        <% }else {%>
                <%let checked = Todo[i].done ? "checked" : "" %>
                     <form action="/check/<%=Todo[i]._id%>" method="POST">
-                <input type="checkbox" name="todo1" onChange="this.form.submit()" <%= checked %> />
+                <input type="checkbox" class="chck" name="todo1" onChange="this.form.submit()" <%= checked %> />
                 </form>
                     <span class="data"><%=Todo[i].task%></span>
                     <form action="/edit/<%=Todo[i]._id%>" method="GET">
-                        <button class="col3"><span class="fas fa-edit"></span></button>
+                        <button class="coli"><span class="fas fa-edit"></span></button>
                         </form>
                     <form action="/del/<%=Todo[i]._id%>" method="GET"> 
-                        <button class="col4"><span class="fas fa-trash"></span></button>
+                        <button class="coli"><span class="fas fa-trash"></span></button>
                     </form>          
             </li>
             <% }} %> 

@@ -32,7 +32,7 @@
            <li class="row">
                <%let checked = Todo[i].done ? "checked" : "" %>
                     <form class="col1" action="/check/<%=Todo[i]._id%>" method="POST">
-                <input type="checkbox"class="chck" name="todo1" onChange="this.form.submit()" <%= checked %> />
+                <input type="checkbox" class="chck" name="todo1" onChange="this.form.submit()" <%= checked %> />
                 </form>
                     <span class="data col2"><%=Todo[i].task%></span>
                     <form class="col3" action="/edit/<%=Todo[i]._id%>" method="GET">

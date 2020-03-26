@@ -35,11 +35,11 @@
                 <input type="checkbox" name="todo1" class="chck col" onChange="this.form.submit()" <%= checked %> />
                 </form>
                     <span class="data col"><%=Todo[i].task%></span>
-                    <form action="/edit/<%=Todo[i]._id%>" method="GET">
-                        <button class="edit col">EDIT</button>
+                    <form class="edit col" action="/edit/<%=Todo[i]._id%>" method="GET">
+                        <button >EDIT</button>
                         </form>
-                    <form action="/del/<%=Todo[i]._id%>" method="GET"> 
-                        <button class="del col">DELETE</button>
+                    <form class="del col" action="/del/<%=Todo[i]._id%>" method="GET"> 
+                        <button >DELETE</button>
                     </form>
             </li>
             <% } %> 

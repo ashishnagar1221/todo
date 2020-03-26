@@ -62,13 +62,14 @@ li{
 .data{
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: #c2fffc;
+    flex: 1 1 150px;
 }
-/*
+
 
 .edit{
-  float: left;
+  
 }
-
+/*
 .del{
    float: left;
 }  */

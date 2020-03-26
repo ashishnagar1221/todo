@@ -55,6 +55,23 @@ li{
     float: left;
 }
 
+.data{
+    position: relative;
+    float: left;
+}
+
+.edit{
+    position: relative;
+    float: left;
+}
+
+
+.delete{
+    position: relative;
+    float: left;
+}
+
+
 
 /*
 

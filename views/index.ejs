@@ -36,10 +36,10 @@
                 </form>
                     <span class="data col2"><%=Todo[i].task%></span>
                     <form class="col3" action="/edit/<%=Todo[i]._id%>" method="GET">
-                        <button ><span class="fas fa-edit"></span></button>
+                        <button class="btn-bdr" ><span class="fas fa-edit "></span></button>
                         </form>
-                    <form class="col4" action="/del/<%=Todo[i]._id%>" method="GET"> 
-                        <button ><span class="fas fa-trash"></span></button>
+                    <form class="col4 " action="/del/<%=Todo[i]._id%>" method="GET"> 
+                        <button class="btn-bdr"><span class="fas fa-trash"></span></button>
                     </form>
             </li>
             <% } %> 

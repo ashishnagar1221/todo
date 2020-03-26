@@ -33,9 +33,9 @@
 
             <%if(Todo[i]._id.toString() === ids.toString()){%>
             <form class="col5" action="/edit/<%=Todo[i]._id%>" method="POST">
-                <input class="col6" type="text" name="newTask" value="<%=Todo[i].task%>"/>
-                <button class="col7" type ="submit">Confirm</button>
-                <button class="col8" ><a href="/">Cancel</a></button>
+                <input class="col6 add" type="text" name="newTask" value="<%=Todo[i].task%>"/>
+                <button class="col7 add" type ="submit">Confirm</button>
+                <button class="col8 add" ><a href="/">Cancel</a></button>
             </form>
        <% }else {%>
                <%let checked = Todo[i].done ? "checked" : "" %>

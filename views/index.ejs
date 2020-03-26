@@ -29,17 +29,17 @@
         </form>
         <ul>
             <%for(let i in Todo){%>
-           <li>
+           <li class="row">
                <%let checked = Todo[i].done ? "checked" : "" %>
                     <form action="/check/<%=Todo[i]._id%>" method="POST">
-                <input type="checkbox" name="todo1" class="chck" onChange="this.form.submit()" <%= checked %> />
+                <input type="checkbox" name="todo1" class="chck col" onChange="this.form.submit()" <%= checked %> />
                 </form>
-                    <span class="data"><%=Todo[i].task%></span>
+                    <span class="data col"><%=Todo[i].task%></span>
                     <form action="/edit/<%=Todo[i]._id%>" method="GET">
-                        <button class="edit">EDIT</button>
+                        <button class="edit col">EDIT</button>
                         </form>
                     <form action="/del/<%=Todo[i]._id%>" method="GET"> 
-                        <button class="del">DELETE</button>
+                        <button class="del col">DELETE</button>
                     </form>
             </li>
             <% } %> 

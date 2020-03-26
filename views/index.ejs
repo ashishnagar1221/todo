@@ -31,15 +31,15 @@
             <%for(let i in Todo){%>
            <li class="row">
                <%let checked = Todo[i].done ? "checked" : "" %>
-                    <form action="/check/<%=Todo[i]._id%>" method="POST">
-                <input type="checkbox" name="todo1" class="chck col" onChange="this.form.submit()" <%= checked %> />
+                    <form class="col1" action="/check/<%=Todo[i]._id%>" method="POST">
+                <input type="checkbox"class="chck" name="todo1" onChange="this.form.submit()" <%= checked %> />
                 </form>
-                    <span class="data col"><%=Todo[i].task%></span>
-                    <form class="edit col" action="/edit/<%=Todo[i]._id%>" method="GET">
-                        <button >EDIT</button>
+                    <span class="data col2"><%=Todo[i].task%></span>
+                    <form class="edit col3 " action="/edit/<%=Todo[i]._id%>" method="GET">
+                        <button ><span class="fas fa-edit"></span></button>
                         </form>
-                    <form class="del col" action="/del/<%=Todo[i]._id%>" method="GET"> 
-                        <button >DELETE</button>
+                    <form class="del col4 " action="/del/<%=Todo[i]._id%>" method="GET"> 
+                        <button ><span class="fas fa-trash"></span></button>
                     </form>
             </li>
             <% } %> 

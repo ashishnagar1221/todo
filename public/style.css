@@ -54,6 +54,7 @@ li{
 .row{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .col1{
@@ -88,10 +89,22 @@ li{
 }
 
 
-.edit{
-  
+.col5{
+    width:80%;
 }
-/*
-.del{
-   float: left;
-}  */
+
+.col6{
+    width:60%;
+}
+
+.col7{
+    width:15%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.col8{
+    width:15%;
+    margin-left: 8px;
+    margin-right: 8px;
+}

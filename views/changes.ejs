@@ -32,10 +32,10 @@
            <li class="row">
 
             <%if(Todo[i]._id.toString() === ids.toString()){%>
-            <form action="/edit/<%=Todo[i]._id%>" method="POST">
-                <input type="text" name="newTask" value="<%=Todo[i].task%>"/>
-                <button type ="submit">Confirm</button>
-                <button><a href="/">Cancel</a></button>
+            <form class="col5" action="/edit/<%=Todo[i]._id%>" method="POST">
+                <input class="col6" type="text" name="newTask" value="<%=Todo[i].task%>"/>
+                <button class="col7" type ="submit">Confirm</button>
+                <button class="col8" ><a href="/">Cancel</a></button>
             </form>
        <% }else {%>
                <%let checked = Todo[i].done ? "checked" : "" %>
@@ -44,10 +44,10 @@
                 </form>
                     <span class="data"><%=Todo[i].task%></span>
                     <form action="/edit/<%=Todo[i]._id%>" method="GET">
-                        <button class="edit"><span class="fas fa-edit"></span></button>
+                        <button class="col3"><span class="fas fa-edit"></span></button>
                         </form>
                     <form action="/del/<%=Todo[i]._id%>" method="GET"> 
-                        <button class="del"><span class="fas fa-trash"></span></button>
+                        <button class="col4"><span class="fas fa-trash"></span></button>
                     </form>          
             </li>
             <% }} %> 
